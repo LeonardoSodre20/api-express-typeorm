@@ -9,6 +9,16 @@ class InMemoryUserRepository implements UserRepository {
     this.users.push(data)
     return data
   }
+
+  async findAndCountAll() {
+    const users = [{ users: this.users, total: this.users.length }]
+    return users
+  }
+
+  async findByID(id: number): Promise<User | null> {
+    const user = this.users.find(user => user.id === id)
+    return user ?? null
+  }
 }
 
 export {

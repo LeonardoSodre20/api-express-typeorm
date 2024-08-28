@@ -1,3 +1,5 @@
+import "reflect-metadata";
+
 import { Application, json, Router } from "express"
 class App {
   constructor(private port: number, private app: Application, private router: Router) {

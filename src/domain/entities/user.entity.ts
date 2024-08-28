@@ -2,7 +2,7 @@
 
 class User {
   constructor(
-    private readonly id: number,
+    public readonly id: number,
     private name: string,
     private email: string
   ) {
